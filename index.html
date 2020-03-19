@@ -1,33 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Test Layout</title>
-        <style type="text/css">
-            body, html
-            {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
-
-            #content
-            {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
-            }
-        </style>
+        <title>KMS Radio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
-        <div id="content">
-            <span class="cc_streaminfo" data-type="song" data-username="dafydd">Loading ...</span>
-            <div class="cc_recenttracks_list" data-username="dafydd">Loading ...</div>
-            <form class="cc_request_form" data-username="dafydd">
-            <div data-type="result"></div>
-            Song artist: <input type="text"  name="request[artist]" size="40" maxlength="127" /><br />
-            Song title: <input type="text"  name="request[title]" size="40" maxlength="127" /><br />
-            Dedicated to: <input type="text"  name="request[dedication]" size="40" maxlength="127" /><br />
-            Your name: <input type="text"  name="request[sender]" size="40" maxlength="127" /><br />
-            Your E-mail: <input type="text"  name="request[email]" size="40" maxlength="127" /><br />
-            <input type="button" value="Submit song request" data-type="submit" /><br />
-            </form>
-        </div>
+        <div align="center" id="header"><h1>KMS Radio</h1></div>
+        <div align="center" id="player"><audio controls><source src="http://192.227.85.169/proxy/dafydd?mp=/stream" type="audio/mpeg"></audio></div>
+        <div align="center" id="np"><h4>Now Playing: <span class="cc_streaminfo" data-type="song" data-username="dafydd">Loading ...</span></h4>></div>
+        <div style="float:left;text-align:center"><h5>Recently Played</h5><div class="cc_recenttracks_list" data-username="dafydd">Loading ...</div></div>
+        <div style="float:right;text-align:center" id="requests">
+        <h5>Song Requests</h5>
+        <form class="cc_request_form" data-username="dafydd">
+        <div data-type="result"></div>
+        Song artist: <input type="text"  name="request[artist]" size="40" maxlength="127" /><br />
+        Song title: <input type="text"  name="request[title]" size="40" maxlength="127" /><br />
+        Dedicated to: <input type="text"  name="request[dedication]" size="40" maxlength="127" /><br />
+        Your name: <input type="text"  name="request[sender]" size="40" maxlength="127" /><br />
+        Your E-mail: <input type="text"  name="request[email]" size="40" maxlength="127" /><br />
+        <input type="button" value="Submit song request" data-type="submit" /><br />
+        </form>
+        </div></center>
     <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/streaminfo.js"></script>
     <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/recenttracks.js"></script>
     <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/request.js"></script>
