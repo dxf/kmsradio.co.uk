@@ -1,6 +1,7 @@
-<html >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>KMS Radio</title>
+        <title>Test Layout</title>
         <style type="text/css">
             body, html
             {
@@ -15,7 +16,20 @@
     </head>
     <body>
         <div id="content">
-            <h1>KMS Radio - Begins Monday. <a href="https://twitter.com/KMSRadioLive">Tweet us in the meantime!</a>
+            <span class="cc_streaminfo" data-type="song" data-username="dafydd">Loading ...</span>
+            <div class="cc_recenttracks_list" data-username="dafydd">Loading ...</div>
+            <form class="cc_request_form" data-username="dafydd">
+            <div data-type="result"></div>
+            Song artist: <input type="text"  name="request[artist]" size="40" maxlength="127" /><br />
+            Song title: <input type="text"  name="request[title]" size="40" maxlength="127" /><br />
+            Dedicated to: <input type="text"  name="request[dedication]" size="40" maxlength="127" /><br />
+            Your name: <input type="text"  name="request[sender]" size="40" maxlength="127" /><br />
+            Your E-mail: <input type="text"  name="request[email]" size="40" maxlength="127" /><br />
+            <input type="button" value="Submit song request" data-type="submit" /><br />
+</form>
         </div>
+    <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/streaminfo.js"></script>
+    <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/recenttracks.js"></script>
+    <script language="javascript" type="text/javascript" src="https://betelgeuse.dribb.com:2199/system/request.js"></script>
     </body>
 </html>
